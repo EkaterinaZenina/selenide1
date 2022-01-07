@@ -1,2 +1,2 @@
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ch4ck8g3f3dekb98?svg=true)](https://ci.appveyor.com/project/EkaterinaZenina/selenide)
+[![Build status](https://ci.appveyor.com/api/projects/status/8x6aagt0w2kjtkav?svg=true)](https://ci.appveyor.com/project/EkaterinaZenina/selenide1)
