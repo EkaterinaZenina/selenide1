@@ -22,4 +22,5 @@ public class ShouldRegByAccountTest {
         $(".button__text").click();
         $("[data-test-id='notification']").shouldHave(Condition.text("Встреча успешно забронирована на " + "date"), Duration.ofSeconds(15)).shouldBe(visible);
     }
+}
 
