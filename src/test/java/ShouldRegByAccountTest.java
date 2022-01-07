@@ -2,6 +2,9 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 
 import java.time.Duration;
@@ -13,7 +16,12 @@ import static com.codeborne.selenide.Selenide.*;
 public class ShouldRegByAccountTest {
     @Test
     public void shouldRegByAccount() {
-        Configuration.holdBrowserOpen = true;
+        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("useAutomationExtension", false);
+        WebDriver driver = new ChromeDriver(options);
+        driver.get( "http://0.0.0.0:9999");
+
         open("http://0.0.0.0:9999");
         $("[data-test-id='city'] .input__control").setValue("Вологда");
         $("[data-test-id='date'] .input__control").setValue(String.valueOf(2022-01-10));
